@@ -31,6 +31,10 @@ void Programa::agregarFigura(int lado, int diagonalMayor,int diagonalMenor){
     vectorFiguras.push_back(new Rombo(lado, diagonalMayor, diagonalMenor));
 }
 
+void Programa::agregarFigura(float base, float altura) {
+    vectorFiguras.push_back(new Triangulo(base, altura));
+}
+
 void Programa::mostrarAreaFigura() {
     float area;
     for(auto & figura : vectorFiguras){
@@ -42,6 +46,23 @@ void Programa::mostrarAreaFigura() {
 
 void Programa::dibujarFiguras(int color) {
     //Recorre el vector y llama al metodo de cada figura con el color
+    switch(color){
+        case 1:
+            system("Color 04"); //Rojo
+            break;
+        case 2:
+            system("Color 03"); //Azul
+            break;
+        case 3:
+            system("Color 02"); //Verde
+            break;
+        case 4:
+            system("Color 05"); //Purpura
+            break;
+        case 5:
+            system("Color 06"); // Amarillo
+            break;
+    }
     for (auto & figura : vectorFiguras) {
         figura->dibujarFigura(color);
     }

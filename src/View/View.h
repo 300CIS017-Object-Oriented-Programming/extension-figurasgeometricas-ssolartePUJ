@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <Programa.h>
+#include <stdlib.h>
 
 using std::cin;
 using std::cout;

@@ -28,7 +28,7 @@ private:
 public:
     Triangulo();
     Triangulo(float base, float altura);
-    virtual ~Triangulo()a() = default;
+    virtual ~Triangulo() = default;
 
     void dibujarFigura() override;
     float calcularArea() override;
