@@ -6,10 +6,14 @@
 #define EJERCICIO_POLIMORFISMO_PROGRAMA_H
 
 #include "../Model/Circulo.h"
+#include "../Model/Triangulo.h"
 #include "../Model/Cuadrado.h"
 #include "../Model/Rectangulo.h"
 #include "../Model/Rombo.h"
 #include "../Model/FiguraGeometrica.h"
+#include <stdlib.h>
+using namespace std;
+
 
 class Programa {
 private:
@@ -23,6 +27,8 @@ public:
     void agregarFigura(float radio);
     void agregarFigura(int base, int altura);
     void agregarFigura(int lado, int diagonalMayor,int diagonalMenor);
+    void agregarFigura(float base, float altura);
+
     void dibujarFiguras();
     void dibujarFiguras(int color); //sobrecarga del metodo para dibujar con colores
     void mostrarAreaFigura();
